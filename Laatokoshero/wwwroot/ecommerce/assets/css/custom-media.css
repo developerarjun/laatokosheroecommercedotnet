@@ -1,0 +1,256 @@
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 1.75rem 15px;
+    }
+}
+
+@media (min-width: 650px) {
+    .modal-dialog {
+        max-width: 620px;
+        margin: 1.75rem auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .headerNav .navbar-nav .dropdown-menu {
+        display: block;
+        top:  120%;
+        transition: 0.2s ease-in-out 0s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .headerNav .navbar-nav .nav-item > .dropdown-menu  {
+        left: -10px;
+    }
+
+    .headerNav .navbar-nav .nav-item:hover > .dropdown-menu  {
+        opacity: 1;
+        top: 100%;
+        visibility: visible;
+    }
+
+    .dropdown-submenu:hover .dropdown-menu {
+        opacity: 1;
+        top: 0%;
+        visibility: visible;
+    }
+
+    .drop-icon-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-social {
+        display: none;
+    }
+
+    .header-logo img {
+        max-height: 70px;
+    }
+
+    .headerNav {
+        background: #f16121;
+    }
+
+    .headerNav .navbar {
+        padding: 12px 0;
+    }
+
+    .sticky-top-custom {
+        position: relative;
+        top: 0;
+    }
+
+    .food-search-head.sticky-top-custom {
+        position: sticky;
+        top: 75px;
+        overflow: unset;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        border: none;
+        padding-left: 20px;
+    }
+
+    .headerNav .navbar-nav > .nav-item > a.nav-link i,
+    .a-drop-out i {
+        font-size: 10px;
+        display: none;
+    }
+
+    .headerNav .navbar-nav > .nav-item {
+        margin-right: 0;
+        padding: 5px 0;
+        border-bottom: solid 1px #fff;
+    }
+
+    .headerNav .navbar-nav > .nav-item:last-child {
+        border-bottom: none;
+    }
+
+    .headerNav .navbar-nav > .nav-item .nav-link {
+        flex-grow: 1;
+    }
+
+    .drop-icon-bar {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #fff;
+        color: #fff;
+        font-size: 27px !important;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+    }
+
+    .drop-icon-bar i {
+        margin-left: 0;
+        font-size: 17px;
+    }
+
+    .dropdown-submenu a.drop-icon-bar:focus {
+        background: none !important;
+        color: #bbbcbd !important;
+    }
+
+    .a-drop.drop-icon-bar {
+        border: solid 1px #bbbcbd;
+        color: #bbbcbd;
+        top: 4px;
+    }
+
+    .drop-icon-bar:hover {
+        border-color: #000;
+    }
+
+    .drop-icon-bar:hover i {
+        color: #000;
+    }
+
+    .a-drop.drop-icon-bar:hover {
+        border-color: #f16121 !important;
+    }
+
+    .a-drop.drop-icon-bar:hover i {
+        color: #f16121 !important;
+    }
+
+    .headerNav .navbar-nav > .nav-item .nav-link {
+        padding-right: 40px;
+    }
+
+    .dropdown-submenu {
+        padding-bottom: 0.5px;
+    }
+
+    .dropdown-submenu .dropdown-menu {
+        margin: 12px !important;
+    }
+
+    .headerNav .navbar-collapse {
+        max-height: 350px;
+        overflow: auto;
+    }
+
+    .headerNav .navbar-nav li:hover > .dropdown-item {
+        background-color: transparent;
+        color: #f16121;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .home-banner-block h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .home-banner-block h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .home-banner-block p {
+        font-size: 14px;
+    }
+
+    .item-home-banner {
+        height: 500px;
+    }
+
+    .offer-body-block h5 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .offer-body-block p {
+       margin-bottom: 30px;
+    }
+
+    .offer-body {
+        padding: 70px 0;
+    }
+
+    .header-address {
+        margin-left: 15px;
+    }
+    .item-header-address {
+        margin-right: 10px;
+    }
+
+    .item-header-address > i {
+        margin-right: 8px;
+        font-size: 8px;
+        width: 18px;
+        height: 18px;
+        box-shadow: 0 0 0 2px #d9d9d9;
+        line-height: 19px;
+    }
+
+    .head-addrs {
+        line-height: 18px;
+    }
+
+    .head-addrs a, .head-addrs span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .lg-img {
+        max-height: 150px;
+    }
+
+    .allfood-search-head {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .item-header-address:first-child {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-login > ul > li > a {
+        font-size: 12px;
+        padding: 2px 3px;
+    }
+
+    .head-dropdown {
+        margin-left: 0px;
+    }
+}
+
+
+
+
+
+

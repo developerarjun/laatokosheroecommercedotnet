@@ -1,0 +1,85 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="innner-content-sec pb-5">
+    <section class="title-sec">
+        <div class="container">
+            <div class="inner-block-head">
+                <h3 style="text-align: center">Laatokoshero Admin Login</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-sec">
+        <div class="container">
+            <div class="m-auto" style="max-width: 500px">
+                <div class="border-bottom pb-4 mb-3">
+
+                    <div class="mb-3">
+                        <label htmlFor="inputEmail" class="form-label">UserName</label>
+                        <input type="text" name="username" class="form-control " id="inputUsername"
+                               placeholder="username" autoComplete="off"
+                               onChange="handleChange(event)"
+                               required />
+                    </div>
+                    <div class="mb-3">
+                        <label htmlFor="inputEmail" class="form-label">Email address</label>
+                        <input type="email" name="email" class="form-control " id="inputEmail"
+                               placeholder="yours@email.com" autoComplete="off"
+                                onChange="handleChange(event)"
+                               required />
+                    </div>
+                    <div class="mb-3">
+                        <label htmlFor="inputPassword" class="form-label">Password</label>
+                        <input type="password" name="password" class="form-control "
+                               id="inputPassword" placeholder="*****" autoComplete="off"
+                                onChange="handleChange(event)"
+                                />
+                    </div>
+                    <button type="submit" id="btnLogin" onClick="handleSubmit()" class="btn btn-custom w-100">Login</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var state = {
+            email: "",
+            password: "",
+            username: "",
+            loginErrors: ""
+        };
+        function handleChange(event) {
+            state[event.target.name] = event.target.value;
+        }
+        function handleSubmit(event) {
+            document.getElementById("btnLogin").disabled = true;
+            const { email, password, username } = state;
+            if (email == "" || password == "" || username == "") {
+                document.getElementById("btnLogin").disabled = false;
+                alert('Please Enter Email and Password and username');
+                return;
+            }
+            var model = {
+                Email: email,
+                Password: password,
+                UserName: username
+            };
+            axios
+                .post(
+                    "/Modules/Public/API/Security/admin-register",
+                    model
+                    ,
+                    { withCredentials: true }
+                )
+                .then(response => {
+                   
+                })
+                .catch(error => {
+                    document.getElementById("btnLogin").disabled = false;
+                    console.log("login error", error);
+                });
+            event.preventDefault();
+        }
+    </script>
+</div>
